@@ -1,22 +1,29 @@
 $(document).ready(function () {
-    $('#saveButton').on('click', function (e) {
-        e.preventDefault(); // Prevenir el envío del formulario
+    // Manejar el envío del formulario de categorías
+    $('#saveButtonCategory').on('click', function (e) {
+        e.preventDefault();
+        var categoryName = $('#categoryName').val();
 
-        // Obtener el valor del campo de nombre del producto o categoría
-        var fieldValue = '';
-
-        if ($('#productName').length) {
-            fieldValue = $('#productName').val(); // Para productos
-        } else if ($('#categoryName').length) {
-            fieldValue = $('#categoryName').val(); // Para categorías
-        }
-
-        // Realizar la validación
-        if (fieldValue.trim() === '') {
-            alert('El campo no puede estar vacío. Por favor, completa el campo.');
+        if (categoryName.trim() === '') {
+            alert('The category field cannot be empty.');
         } else {
-            // Enviar el formulario si todas las validaciones pasan
             $('form').submit();
+        }
+    });
+
+    $('#saveButtonProduct').on('click', function (e) {
+        e.preventDefault();
+        var productName = $('#productName').val();
+        var productPrice = $('#productPrice').val();
+
+        if (productName.trim() === '') {
+            alert('The product field cannot be empty.');
+        } else {
+            if (isNaN(productPrice) || productPrice <= 0) {
+                alert('Please enter a valid and positive product price.');
+            } else {
+                $('form').submit();
+            }
         }
     });
 });

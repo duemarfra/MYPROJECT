@@ -50,7 +50,7 @@ button {
     background-color: #ccc;
 }
 
-#saveButton {
+.saveButton {
     background-color: #4CAF50;
     color: #fff;
 }
