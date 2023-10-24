@@ -1,0 +1,151 @@
+Dentro del archivo validations.js monitorear cuando se intenta postear cada uno de los formularios, el de productos o el de categorias y al momento de postear cualquiera de ellos, realizar las validaciones de sus campos osea si uno o más campos estaán vacíos o completos con espacios en blanco deberá mostrar una alerta nombrando dichos campos y debajo de los campos tu nombre y apellido. A continuacion te comparto el codigo actual de los 5 archivos:
+
+MYPROJECT/assets/js/validations.js (archivo vacio donde debes escribir el codigo solicitado)
+MYPROJECT/assets/js/jquery-3.7.1.min.js (archivo que contiene todo el jquery de la version 3.7.1 minificado)
+
+MYPROJECT/css/styles.css:
+    body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+form {
+    max-width: 80%;
+    padding: 5%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    text-align: center;
+}
+
+label {
+    margin-bottom: 3%;
+}
+
+input {
+    padding: 3%;
+    margin-bottom: 5%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5%;
+}
+
+button {
+    padding: 3% 5%;
+    margin-right: 2%;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#cancelButton {
+    background-color: #ccc;
+}
+
+#saveButton {
+    background-color: #4CAF50;
+    color: #fff;
+}
+
+.centered {
+    text-align: center;
+}
+
+MYPROJECT/backend/views/categories.html:
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../../assets/css/styles.css">
+</head>
+
+<body>
+
+    <script src="../../assets/js/jquery-3.7.1.min.js"></script>
+
+    <form>
+        <h1>Add New Category</h1>
+        <label for="categoryName">Category Name:</label>
+        <input type="text" id="categoryName" name="categoryName" required>
+
+        <div class="buttons">
+            <button type="button" id="cancelButton">Cancel</button>
+            <button type="submit" id="saveButton">Save</button>
+        </div>
+
+        <p class="centered">Created and designed by: Marcelo Dueñas</p>
+    </form>
+</body>
+
+</html>
+
+MYPROJECT/backend/views/products.html:
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../../assets/css/styles.css">
+</head>
+
+<body>
+
+    <script src="../../assets/js/jquery-3.7.1.min.js"></script>
+
+    <form>
+        <h1>Add New Product</h1>
+        <label for="productName">Product Name:</label>
+        <input type="text" id="productName" name="productName" required>
+
+        <div class="buttons">
+            <button type="button" id="cancelButton">Cancel</button>
+            <button type="submit" id="saveButton">Save</button>
+        </div>
+
+        <p class="centered">Created and designed by: Marcelo Dueñas</p>
+    </form>
+</body>
+
+</html>
+
+
+***************************
+//* no borrar *************
+***************************
+// MYPROJECT/css/styles.css
+// MYPROJECT/assets/img/
+// MYPROJECT/assets/js/main.js
+// MYPROJECT/assets/js/validations.js
+// MYPROJECT/assets/js/jquery-3.7.1.min.js
+
+// MYPROJECT/backend/views/categories.html
+// MYPROJECT/backend/views/category_list.html
+// MYPROJECT/backend/views/product_list.html
+// MYPROJECT/backend/views/products.html
+// MYPROJECT/backend/categories.php
+// MYPROJECT/backend/products.php
+
+// MYPROJECT/class/autoload.php
+// MYPROJECT/class/categories.php
+// MYPROJECT/class/products.php
+
+// MYPROJECT/views/home.html
+
+// MYPROJECT/index.php
