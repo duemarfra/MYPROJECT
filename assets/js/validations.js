@@ -1,5 +1,4 @@
 $(document).ready(function () {
-    // Manejar el envío del formulario de categorías
     $('#saveButtonCategory').on('click', function (e) {
         e.preventDefault();
         var categoryName = $('#categoryName').val();
